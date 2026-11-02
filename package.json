@@ -1,0 +1,52 @@
+{
+  "name": "expo-headless-mcp",
+  "version": "0.2.0",
+  "description": "MCP server that lets an AI see and operate an Expo / React Native app via real screenshots, taps, typing and automatic bug-hunting — no emulator, phone or browser.",
+  "mcpName": "io.github.Abubakr-Sanginov/expo-headless-mcp",
+  "type": "module",
+  "license": "MIT",
+  "author": "Abubakr-Sanginov",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abubakr-Sanginov/expo-headless-mcp.git"
+  },
+  "homepage": "https://github.com/Abubakr-Sanginov/expo-headless-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/Abubakr-Sanginov/expo-headless-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "expo",
+    "react-native",
+    "screenshot",
+    "testing",
+    "ai",
+    "claude"
+  ],
+  "bin": {
+    "expo-headless-mcp": "src/server.js"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "README.ru.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node test/e2e.js && node test/device.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@napi-rs/canvas": "^1.1.0",
+    "esbuild": "^0.28.2",
+    "react": "18.3.1",
+    "react-reconciler": "0.29.2",
+    "yoga-layout": "^3.2.1",
+    "zod": "^4.6.7"
+  }
+}

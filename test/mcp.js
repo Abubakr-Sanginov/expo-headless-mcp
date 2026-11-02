@@ -1,0 +1,11 @@
+import { Client } from '@modelcontextprotocol/sdk/client/index.js';
+import { StdioClientTransport } from '@modelcontextprotocol/sdk/client/stdio.js';
+const t = new StdioClientTransport({ command: 'node', args: ['src/server.js'], env: { ...process.env, EXPO_PROJECT: 'test/sample' } });
+const c = new Client({ name: 't', version: '1' });
+await c.connect(t);
+console.log((await c.listTools()).tools.map((x) => x.name));
+const r = await c.callTool({ name: 'refresh_screen', arguments: {} });
+console.log(r.content.map((x) => x.type + ':' + (x.text || x.data.length)));
+const r2 = await c.callTool({ name: 'click_screen', arguments: { x: 195, y: 285 } });
+console.log(r2.content[1].text);
+await c.close();
