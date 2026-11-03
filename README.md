@@ -2,6 +2,13 @@
 
 An MCP server that lets an AI **see and operate an Expo / React Native app without an emulator, a phone or a browser** — real PNG screenshots, taps, typing, scrolling and automatic bug hunting. (Русская версия: [README.ru.md](README.ru.md))
 
+## Documentation
+- [Getting started](docs/getting-started.md) — install for Claude Code / Claude Desktop / Cursor, first run
+- [Tools reference](docs/tools.md) — every tool and parameter
+- [Device mode](docs/device-mode.md) — Android emulator/phone and iOS Simulator, consent and safety model
+- [How it works](docs/how-it-works.md) — architecture, what is supported, development
+- [Troubleshooting](docs/troubleshooting.md)
+
 ## How it works
 Metro + Expo Go need a native runtime, so instead:
 1. `esbuild` bundles your project (`App.*` or `main`), swapping `react-native` for a light shim (`src/shim/rn.js`) and native-only packages (`expo-*`, `react-native-*`) for stubs.

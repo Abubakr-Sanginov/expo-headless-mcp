@@ -2,6 +2,9 @@
 
 MCP-сервер, который даёт ИИ **скриншоты Expo/React Native приложения без эмулятора, телефона и браузера**.
 
+## Документация (на английском)
+[Getting started](docs/getting-started.md) · [Tools](docs/tools.md) · [Device mode](docs/device-mode.md) · [How it works](docs/how-it-works.md) · [Troubleshooting](docs/troubleshooting.md)
+
 ## Как это устроено
 Metro + Expo Go требуют нативный рантайм, поэтому вместо них:
 1. `esbuild` собирает проект (`App.*` или `main`), подменяя `react-native` на лёгкий шим (`src/shim/rn.js`), а нативные пакеты (`expo-*`, `react-native-*`) — на заглушки.
