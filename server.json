@@ -1,7 +1,7 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.Abubakr-Sanginov/expo-headless-mcp",
-  "description": "See and operate an Expo / React Native app with real screenshots, taps, typing and auto bug-hunting — no emulator, phone or browser.",
+  "description": "See and operate Expo / React Native apps: screenshots, taps, typing, auto-testing. No emulator.",
   "repository": {
     "url": "https://github.com/Abubakr-Sanginov/expo-headless-mcp",
     "source": "github"
@@ -12,7 +12,9 @@
       "registryType": "npm",
       "identifier": "expo-headless-mcp",
       "version": "0.2.0",
-      "transport": { "type": "stdio" },
+      "transport": {
+        "type": "stdio"
+      },
       "environmentVariables": [
         {
           "description": "Absolute path of the Expo project to render (can also be passed per call as projectPath).",
